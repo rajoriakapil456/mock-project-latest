@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Important Links"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="https://www.adobe.com/go/aem_cmp_image_v2">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                          <Title
+                                                jcr:primaryType="nt:unstructured"
+                                                fieldDescription="Add a title"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Title"
+                                                name="./Title"/>
+                                         <accordion
+                                        jcr:primaryType="nt:unstructured"
+                                        fieldDescription="Add links"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Links">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./multifield">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <column
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <description
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Description"
+                                                            name="./description"/>
+                                                        <ltitle
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Link title"
+                                                            name="./Link-title"/>
+                                                        <dropmenu
+                                                             jcr:primaryType="nt:unstructured"
+                                             sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                             fieldDescription="Choose Column style(Advanced for column customization)."
+                                             fieldLabel="Select color for button"
+                                             name="./presets">
+                                         <items jcr:primaryType="nt:unstructured">
+                                            <option1
+                                             jcr:primaryType="nt:unstructured"
+                                             text="red"
+                                             value="red"/>
+                                            <option2
+                                             jcr:primaryType="nt:unstructured"
+                                             text="yellow"
+                                             value="yellow"/>
+                                             <option3
+                                             jcr:primaryType="nt:unstructured"
+                                             text="green"
+                                             value="green"/>
+                                         </items> 
+                                         </dropmenu>
+                                                    </items>
+                                                </column>
+                                            </items>
+                                        </field>
+                                    </accordion>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+        </items>
+    </content>
+</jcr:root>

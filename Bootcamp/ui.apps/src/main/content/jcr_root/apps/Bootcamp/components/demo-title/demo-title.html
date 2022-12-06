@@ -1,0 +1,48 @@
+<a href=${properties.linkURL}><input style="background-color: ${properties.presets @context='styleToken'}" type=button value=${properties.linkText}></a>
+<br><br>
+current time =>
+<sly data-sly-use.time="java.util.Date">${time.hours}:${time.minutes}:${time.seconds}</sly>
+<br><br>
+<div data-sly-use.model="com.Bootcamp.core.models.MyModel">
+${model.resourceText}
+<ul data-sly-list="${model.resourceChildren}">
+<li>${item.text} -- ${item.value}</li>
+</ul>
+</div>
+<form action="/action_page.php">
+  <label for="cars">Choose your resource</label>
+  <select data-sly-list="${model.resourceChildren}" name="child resources" id="child resources">
+    <option >${item.name} -- ${item.text} -- ${item.value}</option>
+  </select>
+</form>
+<br><br>
+<div style="background-color:red; ">
+<form action="/action_page.php">
+  <label for="cars">Choose your resource</label>
+  <select data-sly-list="${model.resourceChildren}" name="child resources" id="child resources">
+    <option >${item.name} -- ${item.text} -- ${item.value}</option>
+  </select>
+</form>
+</div>
+<br><br>
+<div style="background-color:green;">
+<form action="/action_page.php">
+  <label for="cars">Choose your resource</label>
+  <select data-sly-list="${model.resourceChildren}" name="child resources" id="child resources">
+    <option >${item.name} -- ${item.text} -- ${item.value}</option>
+  </select>
+</form>
+</div>
+
+
+<br><br>
+
+<style>
+body{
+background-color:${properties.color @context='styleToken'};
+}
+</style>
+
+
+
+
